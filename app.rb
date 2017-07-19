@@ -25,8 +25,8 @@ get "/" do
   <<-HTML
   <html>
     <body>
-      <a href='#{auth_endpoint}'>
-        <img src='btn-alt-Troop.png', alt='Verify with Troop ID' />
+      <a href="#{auth_endpoint}">
+        <img src="btn-alt-Troop.png", alt="Verify with Troop ID" />
       </a>
     </body>
   </html>
@@ -41,7 +41,7 @@ get "/callback" do
 end
 
 get "/profile" do
-  # Retrieve the user's attributes with the access_token we saved in the session from the '/callback' route
+  # Retrieve the user's attributes with the access_token we saved in the session from the "/callback" route
   token        = session[:oauth_token]
   json_payload = token.get(attributes_url).body
 
