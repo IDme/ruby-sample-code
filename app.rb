@@ -25,9 +25,8 @@ get "/" do
   <<-HTML
   <html>
     <body>
-      <a href="#{auth_endpoint}">
-        <img src="btn-alt-Troop.png", alt="Verify with Troop ID" />
-      </a>
+      <span id="idme-wallet-button" data-scope="military" data-client-id="#{client_id}" data-redirect="#{redirect_uri}" data-response="code"></span>
+      <script src="https://s3.amazonaws.com/idme/developer/idme-buttons/assets/js/idme-wallet-button.js"></script>
     </body>
   </html>
   HTML
